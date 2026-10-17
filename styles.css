@@ -17,6 +17,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
+  background-color: #e5ecff;
+  background-image: url("./assets/pattern-background-desktop.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 a {
@@ -30,19 +35,7 @@ a {
   overflow: hidden;
   place-items: center;
   padding: 32px 20px 24px;
-  background: #e5ecff;
-}
-
-.main::before {
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: min(54vh, 420px);
-  background: #d5e0ff;
-  content: "";
-  clip-path: ellipse(83% 74% at 16% 0%);
+  background: transparent;
 }
 
 .page-content {
@@ -121,14 +114,14 @@ a {
   min-width: 0;
 }
 
-.plan-text h2,
+.plan-text h3,
 .plan-text p {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.45;
 }
 
-.plan-text h2 {
+.plan-text h3 {
   color: #1f2f56;
   font-weight: 900;
 }
@@ -143,11 +136,14 @@ a {
   color: #3829e0;
   font-size: 0.8rem;
   font-weight: 800;
+}
+
+.change-link a {
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
-.change-link:hover {
+.change-link a:hover {
   color: #766cf1;
   text-decoration: none;
 }
@@ -174,7 +170,7 @@ a {
 }
 
 .proceed-btn:focus-visible,
-.change-link:focus-visible,
+.change-link a:focus-visible,
 .cancel-order:focus-visible,
 .attribution a:focus-visible {
   outline: 3px solid #ffb9dc;
@@ -206,6 +202,11 @@ a {
 }
 
 @media (max-width: 420px) {
+  body {
+    background-image: url("./assets/pattern-background-mobile.svg");
+    background-size: 100% auto;
+  }
+
   .main {
     padding: 24px;
   }
